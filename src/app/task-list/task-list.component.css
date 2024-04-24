@@ -1,7 +1,91 @@
 .status-active {
-  color: #4ef174; /* Vert clair */
+  color: #4ef174;
 }
 
 .status-closed {
-  color: #dc3545; /* Rouge */
+  color: #dc3545;
+}
+
+.scrollable-table {
+  max-height: calc(1.5em * 20);
+  overflow-y: auto;
+}
+
+.table th:first-child, .table td:first-child {
+  width: 20%;
+}
+
+.table-hover thead {
+  position: sticky;
+  top: 0;
+  color: #000000;
+  z-index: 2;
+}
+
+.table th {
+  width: 20%;
+  position: sticky;
+  top: 0;
+  color: #000000;
+  z-index: 10;
+}
+
+.th-id { width: 10%; }
+.th-name { width: 25%; }
+.th-content { width: 40%; }
+.th-status { width: 15%; }
+.th-actions { width: 10%; }
+
+/* Style pour Chrome, Safari, Edge */
+.scrollable-table::-webkit-scrollbar {
+  width: 2px;
+}
+
+.scrollable-table::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.24); /* Couleur de la barre de défilement elle-même */
+  border-radius: 25px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Style pour Firefox */
+.scrollable-table {
+  scrollbar-width: thin; /* Rendre la barre de défilement mince */
+  scrollbar-color: rgba(189, 186, 186, 0.16) transparent; /* Couleur de la barre et du fond de piste */
+}
+
+.icon-trash {
+  color: red;
+  cursor: pointer;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+}
+
+.actions-container i {
+  cursor: pointer;
+}
+
+.actions-cell {
+  text-align: center;
+}
+
+.icon-trash {
+  color: #d9534f;
+  cursor: pointer;
+}
+
+.icon-trash:hover {
+  color: red;
 }

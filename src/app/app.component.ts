@@ -10,8 +10,6 @@ import { TaskListComponent} from './task-list/task-list.component';
   styleUrl: './app.component.css',
   template: `
   <main>
-    <header class="brand-name">
-    </header>
     <section class="content">
       <app-task-list></app-task-list>
     </section>
