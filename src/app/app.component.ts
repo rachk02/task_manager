@@ -11,7 +11,6 @@ import { TaskListComponent} from './task-list/task-list.component';
   template: `
   <main>
     <header class="brand-name">
-      <img class="brand-logo" src="/src/assets/logo.ico" alt="logo" aria-hidden="true">
     </header>
     <section class="content">
       <app-task-list></app-task-list>
