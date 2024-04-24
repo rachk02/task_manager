@@ -1,0 +1,14 @@
+<div>
+  <input type="text" #nameInput placeholder="Nom de la tâche">
+  <input type="text" #contentInput placeholder="Contenu de la tâche">
+  <button (click)="addTask(nameInput, contentInput)">Ajouter Tâche</button>
+</div>
+
+<table>
+  <tr *ngFor="let task of tasks">
+    <td>{{ task.name }}</td>
+    <td>{{ task.content }}</td>
+    <td>{{ task.status }}</td>
+    <td><button (click)="closeTask(task.id)" *ngIf="task.status === 'active'">Clôturer</button></td>
+  </tr>
+</table>
