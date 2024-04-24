@@ -1,27 +1,30 @@
-# Tasks
+# Task_manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
-## Development server
+## Prérequis
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Avant de commencer, assurez-vous d'avoir les logiciels suivants installés :
+- Node.js - [Télécharger & Installer Node.js](https://nodejs.org/en/download/) et le gestionnaire de paquets npm.
+- Angular CLI - Installez Angular CLI globalement en utilisant npm : 
+  - `npm install -g @angular/cli`
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Pour configurer le projet localement pour le développement et les tests, suivez les instructions ci-dessous :
 
-## Build
+1. Clonez le dépôt GitHub dans votre environnement local en utilisant :
+   - `https://github.com/rachk02/task_manager.git`
+2. Naviguez dans le dossier du projet cloné :
+   - `cd repository`
+3. Installez les dépendances du projet en exécutant :
+   - `npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Développement
 
-## Running unit tests
+- Lancer le serveur de développement en exécutant :
+  - `ng serve`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Ouvrez http://localhost:4200/ dans votre navigateur pour voir l'application s'exécuter.
+- 
+### NB: L'application rechargera automatiquement si vous modifiez l'un des fichiers source.
