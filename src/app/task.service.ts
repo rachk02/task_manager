@@ -27,6 +27,15 @@ export class TaskService {
     }
   }
 
+  reactivateTask(id: number) {
+    const task = this.tasks.find(t => t.id === id);
+    if (task) task.status = 'active';
+  }
+
+  deleteTask(id: number) {
+    this.tasks = this.tasks.filter(t => t.id !== id);
+  }
+
   getTasks(): Task[] {
     return this.tasks;
   }

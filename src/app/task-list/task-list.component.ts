@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { TaskService } from '../task.service';
-import { NgIf } from "@angular/common";
+import {NgClass, NgIf} from "@angular/common";
 import { NgFor } from "@angular/common";
 
 @Component({
   imports: [NgIf,
-    NgFor],
+    NgFor, NgClass],
   selector: 'app-task-list',
   standalone: true,
-  styleUrl: './task-list.component.css',
+  styleUrls: ['./task-list.component.css'],
   templateUrl: './task-list.component.html'
 })
 export class TaskListComponent {
   tasks = this.taskService.getTasks();
+
 
   constructor(private taskService: TaskService) { }
 
@@ -26,6 +27,20 @@ export class TaskListComponent {
   closeTask(id: number): void {
     this.taskService.closeTask(id);
     this.tasks = this.taskService.getTasks(); // Update the list
+  }
+
+  reactivateTask(id: number): void {
+    this.taskService.reactivateTask(id);
+    this.refreshTasks();
+  }
+
+  deleteTask(id: number): void {
+    this.taskService.deleteTask(id);
+    this.refreshTasks();
+  }
+
+  private refreshTasks() {
+    this.tasks = this.taskService.getTasks();
   }
 
 }
